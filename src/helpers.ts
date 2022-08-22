@@ -90,6 +90,7 @@ export function getWrappedValue<T>(
         try {
             return createWrappedFunction(callerRealm, value, valueRealm, utils);
         } catch (error) {
+            console.log(value);
             throw utils.wrapError(error, callerRealm);
         }
     } else if (isObject(value)) {
